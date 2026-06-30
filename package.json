@@ -13,6 +13,8 @@
     "types:check": "tsc --noEmit",
     "fix": "eslint . --fix && prettier --write resources/",
     "check": "eslint . && prettier --check resources/ && tsc --noEmit",
+    "md:lint": "markdownlint *.md",
+    "md:lint:fix": "markdownlint --fix *.md",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -22,6 +24,9 @@
     "*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "*.md": [
+      "markdownlint"
     ]
   },
   "devDependencies": {
@@ -38,6 +43,7 @@
     "eslint-plugin-react-hooks": "^7.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
+    "markdownlint-cli": "^0.49.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript-eslint": "^8.23.0"

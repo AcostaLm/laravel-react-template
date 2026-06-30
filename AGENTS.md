@@ -7,6 +7,7 @@ Laravel React Starter Kit with PostgreSQL, using Bun as package manager.
 ## Commands
 
 ### Quality Checks (PHP)
+
 ```bash
 composer lint:check      # Pint formatting check
 composer static:check    # PHPStan level 8
@@ -17,12 +18,14 @@ composer full-check      # All PHP + JS/TS + tests
 ```
 
 ### Quality Checks (JS/TS)
+
 ```bash
 bun run check            # ESLint + Prettier + TypeScript
 bun run fix              # ESLint + Prettier auto-fix
 ```
 
 ### Development
+
 ```bash
 composer dev             # Vite + artisan serve
 bun run dev              # Vite only
@@ -31,12 +34,14 @@ bun run dev              # Vite only
 ## Code Style
 
 ### PHP
+
 - PSR-12 via Pint (Laravel preset)
 - `declare(strict_types=1)` required
 - Use `import type` for type-only imports
 - 4 spaces indentation
 
 ### JS/TS
+
 - ESLint with React, TypeScript, import ordering
 - Prettier with Tailwind CSS plugin
 - `import type` enforced
@@ -54,6 +59,7 @@ bun run dev              # Vite only
 ## Pre-commit Hooks
 
 Husky + lint-staged runs automatically:
+
 - `*.php` → Pint
 - `*.{ts,tsx}` → ESLint + Prettier
 

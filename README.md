@@ -1,6 +1,7 @@
 # MOB - Laravel React Starter Kit
 
-Proyecto basado en [Laravel React Starter Kit](https://laravel.com/docs/starter-kits) con herramientas de calidad de código configuradas.
+Proyecto basado en [Laravel React Starter Kit](https://laravel.com/docs/starter-kits)
+con herramientas de calidad de código configuradas.
 
 ## Stack
 
@@ -29,7 +30,7 @@ Esto ejecuta: dependencias PHP, key, migraciones, dependencias JS y build.
 ### Herramientas de Calidad (PHP)
 
 | Herramienta | Qué hace | Comando |
-|-------------|----------|---------|
+|---|---|---|
 | **Pint** | Formateo de código PHP | `composer lint` |
 | **Larastan** | Análisis estático nivel 8 | `composer static:check` |
 | **Rector** | Refactorización automatizada | `composer rector:check` |
@@ -38,8 +39,8 @@ Esto ejecuta: dependencias PHP, key, migraciones, dependencias JS y build.
 ### Herramientas de Calidad (JS/TS)
 
 | Herramienta | Qué hace | Comando |
-|-------------|----------|---------|
-| **ESLint** | Linting React + TypeScript | `bun run lint:check` |
+|---|---|---|
+| **ESLint** | Linting React + TS | `bun run lint:check` |
 | **Prettier** | Formateo de código | `bun run format:check` |
 | **TypeScript** | Chequeo de tipos | `bun run types:check` |
 
@@ -70,6 +71,7 @@ Ejecuta todas las herramientas de calidad: PHP + JS/TS + tests.
 ### Pre-commit Hooks
 
 Se ejecutan automáticamente antes de cada commit:
+
 - **PHP:** Pint (auto-fix)
 - **JS/TS:** ESLint (auto-fix) + Prettier (auto-fix)
 
@@ -110,7 +112,7 @@ bun run dev              # Servidor de desarrollo
 
 ## Estructura del Proyecto
 
-```
+```text
 ├── app/
 │   ├── Http/Controllers/
 │   ├── Models/
@@ -143,10 +145,12 @@ bun run dev              # Servidor de desarrollo
 GitHub Actions ejecuta automáticamente en cada push/PR a `main`:
 
 **Job PHP:**
+
 - Pint, PHPStan, TLint, Rector
 - Tests con Pest + PostgreSQL
 
 **Job Frontend:**
+
 - ESLint, Prettier, TypeScript
 
 ## Git
