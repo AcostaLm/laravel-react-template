@@ -62,6 +62,21 @@
         "lint:check": [
             "pint --parallel --test"
         ],
+        "rector": [
+            "rector process"
+        ],
+        "rector:check": [
+            "rector process --dry-run"
+        ],
+        "tlint": [
+            "tlint lint --fix"
+        ],
+        "tlint:check": [
+            "tlint lint"
+        ],
+        "static:check": [
+            "phpstan analyse"
+        ],
         "ci:check": [
             "Composer\\Config::disableProcessTimeout",
             "npm run lint:check",
