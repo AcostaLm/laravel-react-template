@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\CarbonImmutable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
@@ -33,8 +34,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Date::use(CarbonImmutable::class);
 
+        Model::shouldBeStrict(! app()->isProduction());
+
         DB::prohibitDestructiveCommands(
             app()->isProduction(),
+        );
+
+        DB::whenQueryingForLongerThan(
+            500,
+            fn () => report('Slow query detected'),
         );
 
         Password::defaults(fn (): ?Password => app()->isProduction()
