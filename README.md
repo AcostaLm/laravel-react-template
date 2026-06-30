@@ -115,6 +115,8 @@ bun run dev              # Servidor de desarrollo
 │   ├── Http/Controllers/
 │   ├── Models/
 │   └── Providers/
+├── .github/workflows/
+│   └── ci.yml                # GitHub Actions CI
 ├── resources/js/
 │   ├── components/
 │   ├── layouts/
@@ -125,15 +127,27 @@ bun run dev              # Servidor de desarrollo
 │   ├── Architecture/
 │   ├── Feature/
 │   └── Unit/
-├── phpstan.neon          # Config PHPStan
-├── rector.php            # Config Rector
-├── pint.json             # Config Pint
-├── .tlint.json           # Config TLint
-├── eslint.config.js      # Config ESLint
-├── .prettierrc           # Config Prettier
-├── tsconfig.json         # Config TypeScript
-└── package.json          # Config lint-staged
+├── phpstan.neon              # Config PHPStan
+├── rector.php                # Config Rector
+├── pint.json                 # Config Pint
+├── .tlint.json               # Config TLint
+├── eslint.config.js          # Config ESLint
+├── .prettierrc               # Config Prettier
+├── .editorconfig             # Config editor unificada
+├── tsconfig.json             # Config TypeScript
+└── package.json              # Config lint-staged
 ```
+
+## CI/CD
+
+GitHub Actions ejecuta automáticamente en cada push/PR a `main`:
+
+**Job PHP:**
+- Pint, PHPStan, TLint, Rector
+- Tests con Pest + PostgreSQL
+
+**Job Frontend:**
+- ESLint, Prettier, TypeScript
 
 ## Git
 
