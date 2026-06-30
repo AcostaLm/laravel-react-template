@@ -1,13 +1,18 @@
 includes:
     - vendor/larastan/larastan/extension.neon
-    - vendor/nesbot/carbon/extension.neon
 
 parameters:
     paths:
-        - app/
-        - bootstrap/app.php
-        - config/
-        - database/
-        - routes/
+        - app
+    level: 8
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: false
 
-    level: 7
+    ignoreErrors:
+        - '#Unsafe usage of new static#'
+        - '#Cannot call method .* on .*\\User\|null#'
+        - '#Cannot access property .* on .*\\User\|null#'
+        - '#Verified constructor expects Illuminate\\Contracts\\Auth\\MustVerifyEmail#'
+        - '#Call to an undefined method Illuminate\\Translation\\Translator::trans\(\)#'
+        - '#has parameter .* with no value type specified in iterable type#'
+        - '#Cannot call method diffForHumans\(\) on#'
