@@ -59,6 +59,20 @@ bun run check
 
 Ejecuta en orden: ESLint, Prettier, TypeScript.
 
+### Comando Full Check
+
+```bash
+composer full-check
+```
+
+Ejecuta todas las herramientas de calidad: PHP + JS/TS + tests.
+
+### Pre-commit Hooks
+
+Se ejecutan automáticamente antes de cada commit:
+- **PHP:** Pint (auto-fix)
+- **JS/TS:** ESLint (auto-fix) + Prettier (auto-fix)
+
 ### Servidor de Desarrollo
 
 ```bash
@@ -76,6 +90,7 @@ composer static:check    # PHPStan
 composer rector:check    # Rector dry-run
 composer tlint:check     # TLint
 composer test            # Lint + PHPStan + Pest
+composer full-check      # PHP + JS/TS + tests
 composer dev             # Servidor de desarrollo
 ```
 
@@ -107,6 +122,7 @@ bun run dev              # Servidor de desarrollo
 │   └── lib/
 ├── routes/
 ├── tests/
+│   ├── Architecture/
 │   ├── Feature/
 │   └── Unit/
 ├── phpstan.neon          # Config PHPStan
@@ -115,7 +131,8 @@ bun run dev              # Servidor de desarrollo
 ├── .tlint.json           # Config TLint
 ├── eslint.config.js      # Config ESLint
 ├── .prettierrc           # Config Prettier
-└── tsconfig.json         # Config TypeScript
+├── tsconfig.json         # Config TypeScript
+└── package.json          # Config lint-staged
 ```
 
 ## Git
