@@ -43,6 +43,7 @@ Esto ejecuta: dependencias PHP, key, migraciones, dependencias JS y build.
 | **ESLint** | Linting React + TS | `bun run lint:check` |
 | **Prettier** | Formateo de código | `bun run format:check` |
 | **TypeScript** | Chequeo de tipos | `bun run types:check` |
+| **markdownlint** | Linting markdown | `bun run md:lint` |
 
 ### Comando Único (PHP)
 
@@ -74,6 +75,7 @@ Se ejecutan automáticamente antes de cada commit:
 
 - **PHP:** Pint (auto-fix)
 - **JS/TS:** ESLint (auto-fix) + Prettier (auto-fix)
+- **MD:** markdownlint
 
 ### Servidor de Desarrollo
 
