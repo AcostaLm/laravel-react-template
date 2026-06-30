@@ -94,6 +94,15 @@
             "@types:check",
             "@php artisan test"
         ],
+        "full-check": [
+            "Composer\\Config::disableProcessTimeout",
+            "@lint:check",
+            "@types:check",
+            "@tlint:check",
+            "@rector:check",
+            "@php artisan test",
+            "bun run check"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
