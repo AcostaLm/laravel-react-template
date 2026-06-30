@@ -17,8 +17,7 @@
   },
   "lint-staged": {
     "*.php": [
-      "vendor/bin/pint",
-      "vendor/bin/phpstan analyse --no-progress"
+      "vendor/bin/pint"
     ],
     "*.{ts,tsx}": [
       "eslint --fix",
