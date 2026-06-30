@@ -43,13 +43,21 @@ Esto ejecuta: dependencias PHP, key, migraciones, dependencias JS y build.
 | **Prettier** | Formateo de código | `bun run format:check` |
 | **TypeScript** | Chequeo de tipos | `bun run types:check` |
 
-### Comando Único
+### Comando Único (PHP)
 
 ```bash
 composer test
 ```
 
 Ejecuta en orden: Pint, PHPStan, tests de Pest.
+
+### Comando Único (JS/TS)
+
+```bash
+bun run check
+```
+
+Ejecuta en orden: ESLint, Prettier, TypeScript.
 
 ### Servidor de Desarrollo
 
@@ -74,6 +82,8 @@ composer dev             # Servidor de desarrollo
 ## Scripts NPM/Bun
 
 ```bash
+bun run check            # ESLint + Prettier + TypeScript (solo lectura)
+bun run fix              # ESLint + Prettier auto-fix
 bun run lint             # ESLint auto-fix
 bun run lint:check       # ESLint solo lectura
 bun run format           # Prettier auto-fix
