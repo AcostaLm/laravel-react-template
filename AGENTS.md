@@ -15,6 +15,7 @@ composer rector:check    # Rector dry-run
 composer tlint:check     # TLint linting
 composer test            # Pint + PHPStan + Pest
 composer full-check      # All PHP + JS/TS + tests
+composer full-apply      # Auto-fix all PHP + JS/TS (Pint, Rector, TLint, ESLint, Prettier)
 ```
 
 ### Quality Checks (JS/TS)

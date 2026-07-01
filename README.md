@@ -69,6 +69,14 @@ composer full-check
 
 Ejecuta todas las herramientas de calidad: PHP + JS/TS + tests.
 
+### Comando Full Apply
+
+```bash
+composer full-apply
+```
+
+Auto-fix de todas las herramientas: Pint, Rector, TLint, ESLint, Prettier.
+
 ### Pre-commit Hooks
 
 Se ejecutan automáticamente antes de cada commit:
@@ -95,6 +103,7 @@ composer rector:check    # Rector dry-run
 composer tlint:check     # TLint
 composer test            # Lint + PHPStan + Pest
 composer full-check      # PHP + JS/TS + tests
+composer full-apply      # Auto-fix todo (Pint, Rector, TLint, ESLint, Prettier)
 composer dev             # Servidor de desarrollo
 ```
 
