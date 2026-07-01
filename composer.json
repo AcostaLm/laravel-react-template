@@ -104,6 +104,14 @@
             "@php artisan test",
             "bun run check"
         ],
+        "full-apply": [
+            "Composer\\Config::disableProcessTimeout",
+            "@lint",
+            "@types:check",
+            "@tlint",
+            "@rector",
+            "bun run format"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
