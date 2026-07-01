@@ -71,7 +71,7 @@
             "rector process --dry-run"
         ],
         "tlint": [
-            "tlint lint --fix"
+            "tlint format"
         ],
         "tlint:check": [
             "tlint lint"
